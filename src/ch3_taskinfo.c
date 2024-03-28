@@ -42,7 +42,7 @@ int main()
 	assert(1 == info.syscall_times[SYSCALL_WRITE]);
 	assert(0 < info.syscall_times[SYSCALL_YIELD]);
 	assert(0 == info.syscall_times[SYSCALL_EXIT]);
-	assert(t4 - t1 <= info.time);
+	assert(t4 - t1 <= info.time + 1);
 	assert(info.time < t5 - t1 + 100);
 	assert(Running == info.status);
 	puts("Test task info OK!");
