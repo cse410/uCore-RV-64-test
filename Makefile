@@ -13,6 +13,7 @@ cmake_build_args += -DCMAKE_BUILD_TYPE=Release
 else ifeq ($(MODE), debug)
 cmake_build_args += -DCMAKE_BUILD_TYPE=Debug
 endif
+cmake_build_args += -DCMAKE_EXE_LINKER_FLAGS="-static -no-pie"
 
 OBJCOPY := $(ARCH)-linux-musl-objcopy
 OBJDUMP := $(ARCH)-linux-musl-objdump
